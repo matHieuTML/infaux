@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Tailwind & Alpine</title>
+  <link href="./dist/style.css" rel="stylesheet">
+  <script type="module" src="./src/main.js" defer></script>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans p-8">
+  <!-- Header -->
+  <header class="bg-primary text-black p-4 rounded shadow">
+    <h1 class="text-2xl font-bold">Test Tailwind CSS & Alpine.js</h1>
+    <p class="text-sm">Une simple démonstration de fonctionnalités</p>
+  </header>
+
+  <!-- Alpine.js Example -->
+  <main class="mt-8">
+    <div x-data="{ open: false }" class="bg-white p-6 rounded shadow">
+      <button 
+        class="bg-secondary text-white px-4 py-2 rounded" 
+        @click="open = !open"
+      >
+        {{ open ? 'Cacher' : 'Afficher' }} le texte
+      </button>
+      <p x-show="open" class="mt-4 text-gray-700">
+        Ce texte est contrôlé par Alpine.js. Cliquez sur le bouton pour le montrer ou le cacher.
+      </p>
+    </div>
+  </main>
+
+  <!-- Tailwind Utility Example -->
+  <footer class="mt-8 text-center text-sm text-gray-500">
+    <p>Créé avec <span class="font-bold text-primary">Tailwind CSS</span> et <span class="font-bold text-secondary">Alpine.js</span></p>
+  </footer>
+</body>
+</html>

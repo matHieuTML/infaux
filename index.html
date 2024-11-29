@@ -9,28 +9,115 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans p-8">
-  <!-- Header -->
-  <header class="bg-primary text-black p-4 rounded shadow">
-    <h1 class="text-2xl font-bold">Test Tailwind CSS & Alpine.js</h1>
-    <p class="text-sm">Une simple démonstration de fonctionnalités</p>
+  <header class="bg-white shadow p-4">
+    <div class="container mx-auto grid grid-cols-3 items-center">
+      <div class="col-span-1">
+        <img src="favicon.svg" alt="Logo" class="h-6 w-6">
+      </div>
+      <div class="col-span-1"></div>
+      <div x-data="{ open: false }" class="col-span-1 text-right">
+        <div @click="open = !open" class="inline-block space-y-1 focus:outline-none">
+          <div class="w-6 h-0.5 bg-gray-800"></div>
+          <div class="w-6 h-0.5 bg-gray-800"></div>
+          <div class="w-6 h-0.5 bg-gray-800"></div>
+        </div>
+        <div
+          x-show="open"
+          x-transition
+          @click.away="open = false"
+          class="absolute right-4 mt-2 w-48 bg-white shadow-lg rounded-lg p-4"
+        >
+          <ul class="space-y-2">
+            <li><a href="#" class="block text-gray-700 hover:text-blue-500">Home</a></li>
+            <li><a href="#" class="block text-gray-700 hover:text-blue-500">About</a></li>
+            <li><a href="#" class="block text-gray-700 hover:text-blue-500">Services</a></li>
+            <li><a href="#" class="block text-gray-700 hover:text-blue-500">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <!-- Alpine.js Example -->
   <main class="mt-8">
-    <div x-data="{ open: false }" class="bg-white p-6 rounded shadow">
-      <button 
-        class="bg-secondary text-white px-4 py-2 rounded" 
-        @click="open = !open"
-      >
-        {{ open ? 'Cacher' : 'Afficher' }} le texte
-      </button>
-      <p x-show="open" class="mt-4 text-gray-700">
-        Ce texte est contrôlé par Alpine.js. Cliquez sur le bouton pour le montrer ou le cacher.
-      </p>
+    <div class="flex items-center justify-center">
+      <div class="text-left p-6">
+        <h1 class="text-6xl font-bold text-gray-900 mb-4">
+          Éclatez votre bulle, élargissez vos horizons.
+        </h1>
+        <p class="text-lg text-gray-700 mb-6">
+          Comprendre la désinformation, c’est le premier pas pour s’en protéger.
+        </p>
+        <button class=" text-black font-semibold px-6 py-3 rounded ">
+          Découvrez notre solution
+        </button>
+      </div>
     </div>
+    
+    <div class="flex justify-center bg-gray-100 mb-16">
+      <iframe 
+        src="https://www.youtube.com/embed/pAa80STbngQ?si=80iaW7ZFGjAIEStp" 
+        class="w-full max-w-4xl h-96 border-2 border-gray-300 rounded-lg shadow-lg"
+        title="Exemple d'iframe"
+      >
+      </iframe>
+    </div>
+    <article style="background-color: #001258;" class="text-white p-4">
+      <h2 class="text-3xl mb-3">Les bulles informationnelles nous isolent.</h2>
+      <ul class="space-y-3 list-disc list-inside">
+        <li>Chaque jour, nous consommons des milliers d’informations en ligne</li>
+        <li>Les algorithmes des réseaux sociaux renforcent vos croyances en vous exposant toujours aux mêmes idées.</li>
+        <li>C’est ce qu’on appelle une "bulle informationnelle"</li>
+      </ul>
+    </article>
+    <hr>
+    <section>
+      <h2 class="text-3xl mb-3">Les données clés</h2>
+      <p>Pourquoi devons-nous agir ?</p>
+      <article class="mt-4 text-white p-4 " style="background-color: #001258;">
+        <h3>Utilisation intensive </h3>
+        <p>94% des jeunes s'informent sur les réseaux sociaux</p>
+      </article>
+      <article class="mt-2 text-white p-4 " style="background-color: #001258;">
+        <h3>Utilisation intensive </h3>
+        <p>94% des jeunes s'informent sur les réseaux sociaux</p>
+      </article>
+      <article class="mt-2 text-white p-4 " style="background-color: #001258;">
+        <h3>Utilisation intensive </h3>
+        <p>94% des jeunes s'informent sur les réseaux sociaux</p>
+      </article>
+    </section>
+    <section style="background-color: #302CA5;" class="text-white w-full mt-8 ">
+      <h2>Apprenez à voir plus grand, apprenez à voir plus vrai.</h2>
+      <p>Après avoir compris les dangers des bulles informationnelles, découvrez comment les éclater et pourquoi cela change tout.</p>
+      <hr>
+      <p>Avec notre campagne "Éclatez votre bulle, élargissez vos horizons", nous vous invitons à briser ces barrières invisibles et à retrouver une vision plus complète, plus vraie, et plus équilibrée du monde.
+      </p>
+
+      <article>
+        <h3>Sortir de sa bulle, c’est :</h3>
+        <p>Voir le monde différemment :</p>
+        <p>Explorer des idées et des perspectives qui enrichissent notre compréhension.</p>
+
+        <p>Renforcer son esprit critique :</p>
+        <p>Apprendre à identifier les fausses informations et à vérifier les sources.</p>
+
+        <p>Créer du dialogue :</p>
+        <p>Réconcilier des opinions différentes pour construire un avenir plus uni.</p>
+
+        <button>Rejoignez la campagne</button>
+      </article>
+    </section>
+    <hr>
+    <article style="background-color: #302CA5;" class="mt-8 p-4 text-white">
+      <img src="screenshot.png" alt="un screenshot d'une page">
+      <h2>Agissez maintenant !</h2>
+      <p>Éclatez votre bulle aujourd’hui.</p>
+      <p>Découvrez notre solution en ligne et apprenez à sortir de votre bulle informationnelle en vous exercant sur notre plateforme et décrochez votre certification !</p>
+      <button>Je m'engage</button>
+    </article>
   </main>
 
-  <!-- Tailwind Utility Example -->
+
   <footer class="mt-8 text-center text-sm text-gray-500">
     <p>Créé avec <span class="font-bold text-primary">Tailwind CSS</span> et <span class="font-bold text-secondary">Alpine.js</span></p>
   </footer>

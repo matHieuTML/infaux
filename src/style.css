@@ -12,3 +12,32 @@
     box-sizing: border-box;
 }
 
+main{
+    overflow: hidden;
+}
+
+
+.pangolin-regular {
+    font-family: "Pangolin", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.funnel-regular{
+    font-family: "Funnel Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2, h3{
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+}

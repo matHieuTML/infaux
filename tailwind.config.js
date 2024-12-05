@@ -10,7 +10,8 @@ export default {
       colors: {
         primary: '#001258',   // Couleur principale
         secondary: '#302CA5', // Couleur secondaire
-        accent: '#ffee36',    // Couleur d'accentuation
+        accent: '#ffee36', 
+        crystal: '#2B2CEB'
       },
     },
   },
